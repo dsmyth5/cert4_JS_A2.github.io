@@ -1,5 +1,5 @@
 
-const btn_get = document.getElementById("btn_get");
+// const btn_get = document.getElementById("btn_get");
 const form_text = document.getElementById("input_text");
 const form_catagort = document.getElementById("catagory");
 const form_color = document.getElementById("text_color");
@@ -7,7 +7,7 @@ const form_size = document.getElementById("text_size");
 const image_contaier = document.getElementById("meme_image");
 
 const btn_prev = document.getElementById("btn_back");
-const error_div = document.getElementById("error_div");
+// const error_div = document.getElementById("error_div");
 const btn_next = document.getElementById("btn_forward");
 
 const img1 = document.getElementById("img1");
@@ -48,7 +48,11 @@ btn_next.addEventListener('click', function () {
     index +=1;  //max?
     get_cats_clicked();
 } )
-btn_get.addEventListener('click', function () {
+// btn_get.addEventListener('click', function () {
+//     index = 0;
+//     get_cats_clicked()
+// } )
+form_catagort.addEventListener('change', function () {
     index = 0;
     get_cats_clicked()
 } )
@@ -60,7 +64,7 @@ async function get_cats_clicked() {
     {
         const ret_json = await ret_fetch.json();
         console.log(ret_json);
-        error_div.innerText = "Cats: "+ret_json.length;
+        // error_div.innerText = "Cats: "+ret_json.length;
 
         for (let i = 0; i < 5; i++)
         {
@@ -88,7 +92,10 @@ async function get_cats_clicked() {
     }
     else
     {
-        error_div.innerText = "Error. return 0";
+        // error_div.innerText = "Error. return 0";
         image_contaier.innerHTML = '<p>Error getting picture</p>'
     }
 }
+// initile page load
+get_cats_clicked();
+

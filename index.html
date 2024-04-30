@@ -21,7 +21,30 @@
     </header>
 
     <main>
-        <div id="form-flex">
+        <!-- <div id="form-flex"> -->
+            <!-- catagory -->
+            <form class="form-group">
+                Catagory
+                <select name="tag" id="catagory">
+                    <option value="" >-all-</option>
+                    <option value="funny" selected>funny</option>
+                    <option value="Cute">Cute</option>
+                    <option value="bored">Bored</option>
+                    <option value="FAT">FAT</option>
+                    <option value="Grumpy">Grumpy</option>
+                    <option value="B&W">B&W</option>
+                    <option value="Bed">Bed</option>
+                    <option value="BigEars">BigEars</option>
+                    <option value="Curious">Curious</option>
+                    <option value="If-fits-I-sits">If-fits-I-sits</option>
+                    <option value="Peekaboo">Peekaboo</option>
+                    <option value="Sleepy">Sleepy</option>
+                </select>
+                <!-- Request new List
+                <input type="button" value="🐈Meowww 😺🐱😾🙀🐾" id="btn_get"
+                    style="cursor: pointer;"> -->
+            </form>
+
             <form class="form-group">
                 Meme Text
                 <input type="text" id="input_text" placeholder="AAAAHHH!!!" value="AAAAHHH!!!">
@@ -51,33 +74,11 @@
                     </div>
                 </div>
             </form>
-
-            <form class="form-group">
-                Catagory
-                <select name="tag" id="catagory">
-                    <option value="" >-none-</option>
-                    <option value="funny" selected>funny</option>
-                    <option value="Cute">Cute</option>
-                    <option value="bored">Bored</option>
-                    <option value="FAT">FAT</option>
-                    <option value="Grumpy">Grumpy</option>
-                    <option value="B&W">B&W</option>
-                    <option value="Bed">Bed</option>
-                    <option value="BigEars">BigEars</option>
-                    <option value="Curious">Curious</option>
-                    <option value="If-fits-I-sits">If-fits-I-sits</option>
-                    <option value="Peekaboo">Peekaboo</option>
-                    <option value="Sleepy">Sleepy</option>
-                </select>
-                Request new List
-                <input type="button" value="Get Cats" id="btn_get"
-                    style="cursor: pointer;">
-            </form>
-        </div>
+        <!-- </div> -->
         <div class="navigator">
-            <div id="btn_back">back</div>
-            <div id="error_div" class="no_btn">0</div>
-            <div id="btn_forward">forward</div>
+            <div id="btn_back">&lt;</div>
+            <!-- <div id="error_div" class="no_btn">0</div> -->
+            <div id="btn_forward">&gt;</div>
         </div>
 
         <div id="image_array">
