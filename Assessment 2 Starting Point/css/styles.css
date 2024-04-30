@@ -1,0 +1,119 @@
+.display {
+    width: 100%;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+
+#facts {
+    width: 100%;
+    padding: 20px;
+    text-align: justify;
+    text-align-last: left;
+}
+header{
+    background-color: aqua;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+main{
+    margin:  20px auto;
+    border-radius: 20px;
+    width: 600px;
+
+    padding: 25px;
+    background-color: rgb(192, 192, 192);
+}
+#form-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.form-group{
+    background-color: #a7a7a7;
+    border: 1px solid rgb(85, 85, 85);
+    border-radius: 10px;
+    width: 49%;
+    margin: 10px 0;
+    align-content: end;
+    padding: 5px;
+}
+.form-split{
+    display: flex;
+
+}
+.form-split > div{
+    width: 50%;
+
+}
+
+
+input, select, button{
+    border-radius: 5px;
+    border: 1px solid rgb(85, 85, 85);
+    padding: 5px;
+    margin-bottom: 12px;
+    width: 100%;
+    background-color: rgb(237, 255, 249);
+}
+
+#btn_get{
+   background-color: aqua;
+}
+#btn_get:hover{
+   background-color: rgb(2, 189, 189);
+}
+#btn_get:active{
+   background-color: rgb(1, 150, 150);
+}
+
+#meme_image{
+    width: 80%;
+    margin: 10px auto;
+    padding: 0;
+    border: rgb(85, 85, 85) solid 1px;
+}
+img{
+    width: 100%;
+}
+
+#image_array{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 12px;
+}
+.list_image{
+    width: 20%;
+    height: 100px;
+    border: 1px rgb(85, 85, 85) solid;
+}
+
+.navigator{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.navigator > div{
+    background-color: #DDDDDD;
+    border: 1px rgb(85, 85, 85) solid;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.navigator > .no_btn{
+    background-color: rgb(192, 192, 192);
+    border: 1px rgb(85, 85, 85) solid;
+    padding: 5px;
+    cursor: default;
+    border-radius: 2px;
+}
+
+#image_array > div{
+    cursor: pointer;
+    background-image: none;
+    background-position-x: center;
+    background-size: cover;
+    border-radius: 2px;
+}

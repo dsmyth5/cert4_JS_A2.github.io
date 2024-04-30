@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Main CSS file! -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Main JavaScript FIle -->
+    <script src="./js/main.js" defer></script>
+    <title>Meme Cats</title>
+</head>
+
+<body>
+    <header>
+        <h1>Meme Cats</h1>
+        <h4>Click thumbnail to apply text</h4>
+    </header>
+
+    <main>
+        <div id="form-flex">
+            <form class="form-group">
+                Meme Text
+                <input type="text" id="input_text" placeholder="AAAAHHH!!!" value="AAAAHHH!!!">
+                <div class="form-split">
+                    <div>
+                     Font color
+                        <select name="font" id="text_color">
+                            <option value="?fontColor=black">black</option>
+                            <option value="?fontColor=white">white</option>
+                            <option value="?fontColor=red">red</option>
+                            <option value="?fontColor=green">green</option>
+                            <option value="?fontColor=blue">blue</option>
+                            <option value="?fontColor=teal">teal</option>
+                        </select>
+                    </div>
+                    <div>
+                        Font Size
+                        <select name="font_size" id="text_size">
+                            <option value="&fontSize=20">20</option>
+                            <option value="&fontSize=30" selected>30</option>
+                            <option value="&fontSize=40">40</option>
+                            <option value="&fontSize=50">50</option>
+                            <option value="&fontSize=60">60</option>
+                            <option value="&fontSize=70">70</option>
+                            <option value="&fontSize=80">80</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+
+            <form class="form-group">
+                Catagory
+                <select name="tag" id="catagory">
+                    <option value="" >-none-</option>
+                    <option value="funny" selected>funny</option>
+                    <option value="Cute">Cute</option>
+                    <option value="bored">Bored</option>
+                    <option value="FAT">FAT</option>
+                    <option value="Grumpy">Grumpy</option>
+                    <option value="B&W">B&W</option>
+                    <option value="Bed">Bed</option>
+                    <option value="BigEars">BigEars</option>
+                    <option value="Curious">Curious</option>
+                    <option value="If-fits-I-sits">If-fits-I-sits</option>
+                    <option value="Peekaboo">Peekaboo</option>
+                    <option value="Sleepy">Sleepy</option>
+                </select>
+                Request new List
+                <input type="button" value="Get Cats" id="btn_get"
+                    style="cursor: pointer;">
+            </form>
+        </div>
+        <div class="navigator">
+            <div id="btn_back">back</div>
+            <div id="error_div" class="no_btn">0</div>
+            <div id="btn_forward">forward</div>
+        </div>
+
+        <div id="image_array">
+            <div id="img1" class="list_image" image_id=""></div>
+            <div id="img2" class="list_image" image_id=""></div>
+            <div id="img3" class="list_image" image_id=""></div>
+            <div id="img4" class="list_image" image_id=""></div>
+            <div id="img5" class="list_image" image_id=""></div>
+
+        </div>
+        <div id="meme_image" style="display: none;">
+            <img src="" alt="meme image">
+        </div>
+    </main>
+</body>
+</html>
