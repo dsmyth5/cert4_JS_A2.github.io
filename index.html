@@ -2,96 +2,158 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- Main CSS file! -->
-    <link rel="stylesheet" href="./css/styles.css">
-    <!-- Main JavaScript FIle -->
-    <script src="./js/main.js" defer></script>
-    <title>Meme Cats</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+	<!-- bootstrap icons  -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+	<!-- Main CSS file! -->
+	<link rel="stylesheet" href="./css/styles.css">
+	<!-- Main JavaScript FIle -->
+	<script src="./js/main.js" defer></script>
+	<title>Meme Cats</title>
 </head>
 
 <body>
-    <header>
-        <h1>Meme Cats</h1>
-        <h4>Click thumbnail to apply text</h4>
-    </header>
+	<header>
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-sm-2">
+					<!-- spacer -->
+					&NonBreakingSpace;
+				</div>
+				<div class="col-sm-8">
+					<!-- centre text -->
+					<h1>Meme Cats</h1>
+					<h4>Click thumbnail to apply text</h4>
+				</div>
 
-    <main>
-        <!-- <div id="form-flex"> -->
-            <!-- catagory -->
-            <form class="form-group">
-                Catagory
-                <select name="tag" id="catagory">
-                    <option value="" >-all-</option>
-                    <option value="funny" selected>funny</option>
-                    <option value="Cute">Cute</option>
-                    <option value="bored">Bored</option>
-                    <option value="FAT">FAT</option>
-                    <option value="Grumpy">Grumpy</option>
-                    <option value="B&W">B&W</option>
-                    <option value="Bed">Bed</option>
-                    <option value="BigEars">BigEars</option>
-                    <option value="Curious">Curious</option>
-                    <option value="If-fits-I-sits">If-fits-I-sits</option>
-                    <option value="Peekaboo">Peekaboo</option>
-                    <option value="Sleepy">Sleepy</option>
-                </select>
-                <!-- Request new List
+				<!-- Button trigger modal -->
+				<div class="col-sm-2">
+					<div type="button" class="btn btn-info p-2 fs-4"
+						data-bs-toggle="modal"
+						data-bs-target="#exampleModal">
+						Contact
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<!-- form: catagory -->
+		<div class="form-group">
+			Catagory
+			<select name="tag" id="catagory">
+				<option value="">-all-</option>
+				<option value="funny" selected>funny</option>
+				<option value="Cute">Cute</option>
+				<option value="bored">Bored</option>
+				<option value="FAT">FAT</option>
+				<option value="Grumpy">Grumpy</option>
+				<option value="B&W">B&W</option>
+				<option value="Bed">Bed</option>
+				<option value="BigEars">BigEars</option>
+				<option value="Curious">Curious</option>
+				<option value="If-fits-I-sits">If-fits-I-sits</option>
+				<option value="Peekaboo">Peekaboo</option>
+				<option value="Sleepy">Sleepy</option>
+			</select>
+			<!-- Request new List
                 <input type="button" value="🐈Meowww 😺🐱😾🙀🐾" id="btn_get"
                     style="cursor: pointer;"> -->
-            </form>
+		</div>
 
-            <form class="form-group">
-                Meme Text
-                <input type="text" id="input_text" placeholder="AAAAHHH!!!" value="AAAAHHH!!!">
-                <div class="form-split">
-                    <div>
-                     Font color
-                        <select name="font" id="text_color">
-                            <option value="?fontColor=black">black</option>
-                            <option value="?fontColor=white">white</option>
-                            <option value="?fontColor=red">red</option>
-                            <option value="?fontColor=green">green</option>
-                            <option value="?fontColor=blue">blue</option>
-                            <option value="?fontColor=teal">teal</option>
-                        </select>
-                    </div>
-                    <div>
-                        Font Size
-                        <select name="font_size" id="text_size">
-                            <option value="&fontSize=20">20</option>
-                            <option value="&fontSize=30" selected>30</option>
-                            <option value="&fontSize=40">40</option>
-                            <option value="&fontSize=50">50</option>
-                            <option value="&fontSize=60">60</option>
-                            <option value="&fontSize=70">70</option>
-                            <option value="&fontSize=80">80</option>
-                        </select>
-                    </div>
-                </div>
-            </form>
-        <!-- </div> -->
-        <div class="navigator">
-            <div id="btn_back">&lt;</div>
-            <!-- <div id="error_div" class="no_btn">0</div> -->
-            <div id="btn_forward">&gt;</div>
-        </div>
+		<!-- form: meem text options -->
+		<div class="form-group">
+			Meme Text
+			<input type="text" id="input_text" placeholder="add meme text" value="AAAAHHH!!!">
+			<div class="form-split">
+				<div>
+					Font color
+					<select name="font" id="text_color">
+						<option value="?fontColor=black">black</option>
+						<option value="?fontColor=white">white</option>
+						<option value="?fontColor=red">red</option>
+						<option value="?fontColor=green">green</option>
+						<option value="?fontColor=blue">blue</option>
+						<option value="?fontColor=teal">teal</option>
+					</select>
+				</div>
+				<div>
+					Font Size
+					<select name="font_size" id="text_size">
+						<option value="&fontSize=20">20</option>
+						<option value="&fontSize=30" selected>30</option>
+						<option value="&fontSize=40">40</option>
+						<option value="&fontSize=50">50</option>
+						<option value="&fontSize=60">60</option>
+						<option value="&fontSize=70">70</option>
+						<option value="&fontSize=80">80</option>
+					</select>
+				</div>
+			</div>
+		</div>
 
-        <div id="image_array">
-            <div id="img1" class="list_image" image_id=""></div>
-            <div id="img2" class="list_image" image_id=""></div>
-            <div id="img3" class="list_image" image_id=""></div>
-            <div id="img4" class="list_image" image_id=""></div>
-            <div id="img5" class="list_image" image_id=""></div>
+		<!-- debug error box -->
+		<div id="error_box">aa</div>
 
-        </div>
-        <div id="meme_image" style="display: none;">
-            <img src="" alt="meme image">
-        </div>
-    </main>
+
+		<!-- forward/back buttons -->
+		<div class="navigator">
+			<div id="btn_back">
+				<!-- bootstrap image libary -->
+				<i class="bi bi-arrow-left-square"></i>
+			</div>
+			<div id="btn_forward">
+				<!-- bootstrap image libary -->
+				<i class="bi bi-arrow-right-square"></i>
+			</div>
+		</div>
+
+		<!-- thumb gallery -->
+		<div id="image_array">
+			<div id="img1" class="list_image" image_id=""></div>
+			<div id="img2" class="list_image" image_id=""></div>
+			<div id="img3" class="list_image" image_id=""></div>
+			<div id="img4" class="list_image" image_id=""></div>
+			<div id="img5" class="list_image" image_id=""></div>
+		</div>
+
+		<!-- large meme image -->
+		<div id="meme_image" style="display: none;">
+			<img src="" alt="meme image">
+		</div>
+	</main>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Contact information</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<!-- popup contact info page -->
+					<iframe src="./contact.html" frameborder="0"></iframe>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- bootstrap js -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+		crossorigin="anonymous"></script>
+
 </body>
+
 </html>

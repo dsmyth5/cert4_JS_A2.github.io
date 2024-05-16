@@ -1,3 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+/* h1, h2, h3, h4{
+    margin: 1rem;
+} */
+
 .display {
     width: 100%;
     padding: 10px 0 0 0;
@@ -14,12 +25,17 @@ header{
     background-color: aqua;
     width: 100%;
     height: auto;
-    text-align: center;
     padding: 10px;
     border-style: solid;
     border-width: 0 0 2px 0;
     border-color: #a0a0a0;
+    /* text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
 }
+
+
 main{
     margin:  20px auto;
     border-radius: 20px;
@@ -141,7 +157,21 @@ img{
     border-radius: 2px;
 }
 
-@media only screen and (max-width: 600px)
+.red_bdr{
+    border-color: red;
+}
+
+#error_box{
+    width: 100%;
+    display: none;
+    border: red solid 1px;
+    margin-bottom: 5px;
+    background-color: rgb(237, 255, 249);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 576px)
 {
     main{
         width: 100%;
@@ -153,5 +183,7 @@ img{
         flex-direction: column;
         width: 100%;
     }
-
+    /* header{
+        flex-direction: column;
+    } */
 }
