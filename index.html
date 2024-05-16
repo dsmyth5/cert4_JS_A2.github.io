@@ -29,7 +29,7 @@
 				<div class="col-sm-8">
 					<!-- centre text -->
 					<h1>Meme Cats</h1>
-					<h4>Click thumbnail to apply text</h4>
+					<p>Click thumbnail to apply text</p>
 				</div>
 
 				<!-- Button trigger modal -->
@@ -47,7 +47,8 @@
 	<main>
 		<!-- form: catagory -->
 		<div class="form-group">
-			Catagory
+			<!-- Catagory -->
+			<label for="tag">Catagory</label>
 			<select name="tag" id="catagory">
 				<option value="">-all-</option>
 				<option value="funny" selected>funny</option>
@@ -70,11 +71,13 @@
 
 		<!-- form: meem text options -->
 		<div class="form-group">
-			Meme Text
-			<input type="text" id="input_text" placeholder="add meme text" value="AAAAHHH!!!">
+			<!-- Meme Text -->
+			<label for="intext">Meme Text</label>
+			<input type="text" name="intext" id="input_text" placeholder="add meme text" value="AAAAHHH!!!">
 			<div class="form-split">
 				<div>
-					Font color
+					<!-- Font color -->
+					<label for="font">Font color</label>
 					<select name="font" id="text_color">
 						<option value="?fontColor=black">black</option>
 						<option value="?fontColor=white">white</option>
@@ -85,7 +88,8 @@
 					</select>
 				</div>
 				<div>
-					Font Size
+					<!-- Font Size -->
+					<label for="font_size">Font Size</label>
 					<select name="font_size" id="text_size">
 						<option value="&fontSize=20">20</option>
 						<option value="&fontSize=30" selected>30</option>
@@ -107,11 +111,11 @@
 		<div class="navigator">
 			<div id="btn_back">
 				<!-- bootstrap image libary -->
-				<i class="bi bi-arrow-left-square"></i>
+				<div class="bi bi-arrow-left-square"></div>
 			</div>
 			<div id="btn_forward">
 				<!-- bootstrap image libary -->
-				<i class="bi bi-arrow-right-square"></i>
+				<div class="bi bi-arrow-right-square"></div>
 			</div>
 		</div>
 
