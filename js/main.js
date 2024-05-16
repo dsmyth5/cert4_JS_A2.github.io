@@ -146,6 +146,7 @@ function fn_check_valid()
     {
         window.localStorage.setItem("input_t", str);
         form_text.classList.remove('red_bdr');
+        fn_display_error("");
         console.log("text saved"); //validate input
     }
 }
